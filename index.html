@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--This tag will allow the page to scale accoding to the device's screen-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+		<!--This tag will link the css file-->
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+        <title>HOMEPAGE</title>
+	</head>
+
+    <body>
+			<!--This is the navigation class. By putting the code in the class, I can easily edit it in CSS-->
+			<div class="nav">
+				<a href="index.html">HOME</a>
+				<a href="movie_forms.html">UPDATE MOVIES</a>
+				<a href="movies.html">VIEW MOVIES</a>
+				<a href="actor_forms.html">UPDATE ACTORS</a>
+				<a href="actors.html">VIEW ACTORS</a>
+				<div class="search-container">
+					<form method = "POST" action="search.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<h1>OUR OSCAR WINNING MOVIES</h1>
+
+			<!--This is the table that shows all the movies in an orderly fashion-->
+			<table>
+				<tr>
+				<th><a href="https://www.imdb.com/title/tt0462200/"><img src="./images/Black snake moan.jpg" alt="Black Snake Moan Movie"></a></th>
+				<th><a href="https://www.imdb.com/title/tt0112864/"><img src="./images/Die Hard.jpg" alt="Die Hard Movie"></a></th>
+				<th><a href="https://www.imdb.com/title/tt3040964/"><img src="./images/The Jungle Book.jpg" alt="The Jungle Book Movie"></a></th>
+				<th><a href="https://www.imdb.com/title/tt1825683/"><img src="./images/The black Panther.jpg" alt="The Black Panther Movie"></a></th>
+				<th><a href="movies.html"><img src="./images/more.png" alt="view more" width="100" height="100"></a></th>
+			</tr>
+				<tr>
+					<td>BLACK SNAKE MOAN</td>
+					<td>DIE HARD WITH A VENGENCE</td>
+					<td>THE JUNGLE BOOK</td>
+					<td>THE BLACK PANTHER</td>
+				</tr>
+			</table>
+			<h1>OUR POPULAR ONLINE MOVIES</h1>
+
+			<!--These are YouTube videos that are related to the movies-->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/F7Qx7R655LI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Dtd3Wzn_YK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/PkD3Lt9jqow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br><br><br><br>
+
+			<!--This is the footer of the webpage-->
+			<footer><b></b>
+			<p><b>© 2019 by Godly Obeng. Databases & Interfaces Coursework 2</b></p>
+			</footer>
+			</div>
+		</div>
+	</body>
+		 
+</html>

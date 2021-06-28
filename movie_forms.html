@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--This tag will link the css file-->
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+		<title>UPDATE MOVIES</title>
+		<script>
+		//This is the validation code for the forms to keep the integrity	
+		function validate(form)
+		{
+			var ok=1
+			var msg=""
+			for (var i = 0; i < form.length; i++)
+			{
+				if (form.elements[i].value.trim() == "")
+				{
+					msg += "'" + form.elements[i].name + "' is void. "
+					ok = 0
+				}
+			}
+		
+			if (ok == 0)
+			{
+				alert(msg)
+				return false
+			}
+			else
+			{
+				return true
+			}
+		}
+		
+		function validate(form)
+		{
+			fail = validateMovieID(form.mvID.value);
+			fail += validateActorID(form.actID.value);
+			fail += validateMovieTitle(form.mvTitle.value);
+			fail += validateMoviePrice(form.mvPrice.value);
+			fail += validateMovieYear(form.mvYear.value);
+			fail += validateMovieGenre(form.mvGenre.value);
+			fail += validateMovieScenes(form.mvScenes.value);
+
+			if(fail == "") return true;
+			else { alert(fail); return false;}
+		}
+
+		function validateMovieID(field)
+		{
+			if(field == "") return "No movie ID was entered.\n";
+			else if (field.length < 1)
+				return "ID must be more than 0.\n";
+			else if (/[^0-9]/.test(field))
+				return "Only numbers 0 - 9 is allowed in Movie ID.\n";
+			return "";
+		}
+
+		function validateActorID(field)
+		{
+			if(field == "") return "No actor ID was entered.\n";
+			else if (field.length < 1)
+				return "ID must be more than 0.\n";
+			else if (/[^0-9]/.test(field))
+				return "Only numbers 0 - 9 is allowed in Actor ID.\n";
+			return "";
+		}
+
+		function validateMovieTitle(field)
+		{
+			if(field == "") return "No Movie Title was entered.\n";
+			else if (field.length > 64)
+				return "Title characters cannot be more than 64.\n";
+			else if (/[^a-zA-Z]/.test(field))
+				return "Only alphabets a - z A - Z is allowed in title.\n";
+			return "";
+		}
+
+		function validateMoviePrice(field)
+		{
+			if(field == "") return "No movie price was entered.\n";
+			else if (field.length < 1)
+				return "Price must be more than 0.\n";
+			else if (/[^0-9]/.test(field))
+				return "Only numbers 0 - 9 is allowed in price.\n";
+			return "";
+		}
+
+		function validateMovieYear(field)
+		{
+			if(field == "") return "No movie year was entered.\n";
+			else if (field.length < 1)
+				return "Year must be more than 0.\n";
+			else if (/[^0-9]/.test(field))
+				return "Only numbers 0 - 9 is allowed in year.\n";
+			return "";
+		}
+
+		function validateMovieGenre(field)
+		{
+			if(field == "") return "No Movie Genre was entered.\n";
+			else if (field.length > 32)
+				return "Genre characters cannot be more than 32.\n";
+			else if (/[^a-zA-Z]/.test(field))
+				return "Only alphabets a - z A - Z is allowed in genre.\n";
+			return "";
+		}
+
+		function validateMovieScenes(field)
+		{
+			if(field == "") return "No movie scenes number was entered.\n";
+			else if (field.length < 1)
+				return "Scenes must be more than 0.\n";
+			else if (/[^0-9]/.test(field))
+				return "Only numbers 0 - 9 is allowed in scenes.\n";
+			return "";
+		}
+		</script>
+	</head>
+
+    <body>
+		<!--This is the navigation class. By putting the code in the class, I can easily edit it in CSS-->
+			<div class="nav">
+				<a href="index.html">HOME</a>
+				<a href="movie_forms.html">UPDATE MOVIES</a>
+				<a href="movies.html">VIEW MOVIES</a>
+				<a href="actor_forms.html">UPDATE ACTORS</a>
+				<a href="actors.html">VIEW ACTORS</a>
+				<div class="search-container">
+					<form method = "POST" action="search.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<!--This is the adding movie form-->
+			<h1>ADD NEW MOVIE</h1>
+			<form method = "POST" action="addMovie.php" onsubmit="return validate(this)">
+					<p>Movie ID:</p>
+					<input type="text" name="mvID">
+					<br><br>
+					<p>Actor ID:</p>
+					<input type="text" name="actID">
+					<br><br>
+					<p>Movie Title:</p>
+					<input type="text" name="mvTitle">
+					<br><br>
+					<p>Movie Price:</p>
+					<input type="text" name="mvPrice">
+					<br><br>
+					<p>Movie Year:</p>
+					<input type="text" name="mvYear">
+					<br><br>
+					<p>Movie Genre:</p>
+					<input type="text" name="mvGenre">
+					<br><br>
+					<p>Movie Scenes:</p>
+					<input type="text" name="mvScenes">
+					<br><br>
+					<input type="submit" value="SUBMIT">
+				</form> 
+			<h1>DELETE A MOVIE</h1>
+			<!--This is the delete movie form-->
+			<form method = "POST" action="deleteMovie.php" onsubmit="return validate(this)">
+				<p>Movie ID:</p>
+				<input type="text" name="mvID">
+				<br><br>
+				<input type="submit" value="DELETE">
+			</form>
+			<br><br>
+			<br><br>
+			<!--This is the footer of the webpage-->
+			<footer>
+			<p><b>© 2019 by Godly Obeng. Databases & Interfaces Coursework 2</b></p>
+			</footer>
+	</body>
+		 
+</html>

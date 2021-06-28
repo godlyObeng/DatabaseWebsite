@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--This tag will allow the page to scale accoding to the device's screen-->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+		<!--This tag will link the css file-->
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+        <title>ALL MOVIES</title>
+	</head>
+
+    <body>
+		<!--This is the navigation class. By putting the code in the class, I can easily edit it in CSS-->
+			<div class="nav">
+				<a href="index.html">HOME</a>
+				<a href="movie_forms.html">UPDATE MOVIES</a>
+				<a href="movies.html">VIEW MOVIES</a>
+				<a href="actor_forms.html">UPDATE ACTORS</a>
+				<a href="actors.html">VIEW ACTORS</a>
+				<div class="search-container">
+					<form method = "POST" action="search.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<h1>THESE ARE ALL THE MOVIES ON OUR DATABASE</h1>
+			<table>
+				<!--The following are image links -->
+				<tr>
+					<th><a href="https://www.imdb.com/title/tt0462200/"><img src="./images/Black snake moan.jpg" alt="Black Snake Moan Movie"></a></th>
+					<th><a href="https://www.imdb.com/title/tt0112864/"><img src="./images/Die Hard.jpg" alt="Die Hard Movie"></a></th>
+					<th><a href="https://www.imdb.com/title/tt3040964/"><img src="./images/The Jungle Book.jpg" alt="The Jungle Book Movie"></a></th>
+				</tr>
+				<tr>
+					<th><a href="https://www.imdb.com/title/tt1825683/"><img src="./images/The black Panther.jpg" alt="The Black Panther Movie"></a></th>
+					<th><a href="https://www.imdb.com/title/tt0089670/"><img src="./images/comingtoeurope.jpg" alt="Coming to Europe"></a></th>
+					<th><a href="https://www.imdb.com/title/tt0417148/"><img src="./images/snakeonaplane.jpg" alt="Snakes on a plane"></a></th>
+				</tr>
+				<tr>
+					<th><a href="https://www.imdb.com/title/tt6868482/"><img src="./images/freewayoflove.jpg" alt="Freeway of Love"></a></th>
+					<th><a href="https://www.imdb.com/title/tt4154756/"><img src="./images/infinitywar.jpg" alt="infinity War"></a></th>
+					<th><a href="https://www.imdb.com/title/tt6958078/fullcredits"><img src="./images/iknew.jpg" alt="I knew you would come for me"></a></th>
+				</tr>
+				<tr>
+					<th></th>
+					<th><a href="https://themidnight.bandcamp.com/album/nocturnal"><img src="./images/midnight.jpg" alt="The Midnight"></a></th>
+				</tr>
+				</table>
+			<!--This is the footer of the webpage-->
+			<footer><b></b>
+			<p><b>© 2019 by Godly Obeng. Databases & Interfaces Coursework 2</b></p>
+			</footer>
+	</body>
+		 
+</html>

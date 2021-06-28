@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--This tag will allow the page to scale accoding to the device's screen-->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+
+		<!--This tag will link the css file-->
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+        <title>ALL ACTORS</title>
+	</head>
+
+    <body>
+		<!--This is the navigation class. By putting the code in the class, I can easily edit it in CSS-->
+			<div class="nav">
+				<a href="index.html">HOME</a>
+				<a href="movie_forms.html">UPDATE MOVIES</a>
+				<a href="movies.html">VIEW MOVIES</a>
+				<a href="actor_forms.html">UPDATE ACTORS</a>
+				<a href="actors.html">VIEW ACTORS</a>
+				<div class="search-container">
+					<form method = "POST" action="search.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<h1>THESE ARE ALL THE ACTORS OF OUR MOVIES</h1>
+			<!--This is the table that shows all the movies in an orderly fashion-->
+			<table>
+				<tr>
+					<th><a href="https://en.wikipedia.org/wiki/Aretha_Franklin"><img src="./images/actors/aretha.jpg" alt="Aretha"></a></th>
+					<th><a href="https://en.wikipedia.org/wiki/Barry_Nelson"><img src="./images/actors/barry.jpg" alt="Barry"></a></th>
+					<th><a href="https://en.wikipedia.org/wiki/Pierce_Brosnan"><img src="./images/actors/bond.jpg" alt="Bond"></a></th>
+				</tr>
+				<tr>
+					<th><a href="https://en.wikipedia.org/wiki/Bullet_Prakash"><img src="./images/actors/bullet.jpg" alt="Bullet"></a></th>
+					<th><a href="https://www.imdb.com/name/nm0185819/"><img src="./images/actors/daniel.jpg" alt="Daniel"></a></th>
+					<th><a href="https://iridewess.com/riders/jonny-walker-2/"><img src="./images/actors/jonny.jpg" alt="Jonny"></a></th>
+				</tr>
+				<tr>
+					<th><a href="https://www.imdb.com/name/nm0000368/"><img src="./images/actors/laura.jpg" alt="Laura"></a></th>
+					<th></th>
+					<th><a href="https://www.imdb.com/name/nm0005351/"><img src="./images/actors/ryan.jpg" alt="Ryan"></a></th>
+				</tr>
+				</table>
+			<!--This is the footer of the webpage-->
+			<footer><b></b>
+			<p><b>© 2019 by Godly Obeng. Databases & Interfaces Coursework 2</b></p>
+			</footer>
+	</body>
+		 
+</html>

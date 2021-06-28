@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+		<title>UPDATE ACTORS</title>
+		<!--Validation script that checks for form integrity-->
+		<script>
+				function validate(form)
+				{
+					var ok=1
+					var msg=""
+					for (var i = 0; i < form.length; i++)
+					{
+						if (form.elements[i].value.trim() == "")
+						{
+							msg += "'" + form.elements[i].name + "' is void. "
+							ok = 0
+						}
+					}
+				
+					if (ok == 0)
+					{
+						alert(msg)
+						return false
+					}
+					else
+					{
+						return true
+					}
+				}
+				
+				function validate(form)
+				{
+					fail = validateActorID(form.actID.value);
+					fail += validateActorName(form.actName.value);
+		
+					if(fail == "") return true;
+					else { alert(fail); return false;}
+				}
+		
+				function validateActorID(field)
+				{
+					if(field == "") return "No actor ID was entered.\n";
+					else if (field.length < 1)
+						return "ID must be more than 0.\n";
+					else if (/[^0-9]/.test(field))
+						return "Only numbers 0 - 9 is allowed in Actor ID.\n";
+					return "";
+				}
+
+				function validateActorName(field)
+				{
+					if(field == "") return "No actor name was entered.\n";
+					else if (field.length > 64)
+						return "Actor Name characters cannot be more than 64.\n";
+					else if (/[^a-zA-Z]/.test(field))
+						return "Only alphabets a - z A - Z is allowed in actor name.\n";
+					return "";
+				}
+				</script>
+	</head>
+
+    <body>
+			<!--This is the navigation class-->
+			<div class="nav">
+				<a href="index.html">HOME</a>
+				<a href="movie_forms.html">UPDATE MOVIES</a>
+				<a href="movies.html">VIEW MOVIES</a>
+				<a href="actor_forms.html">UPDATE ACTORS</a>
+				<a href="actors.html">VIEW ACTORS</a>
+				<div class="search-container">
+					<form method = "POST" action="search.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+
+			<h1>ADD NEW ACTOR</h1>
+
+			<!--add new actor form-->
+			<form method = "POST" action="addAct.php" onsubmit="return validate(this)">
+				<p>Actor ID:</p>
+				<input type="text" name="actID">
+				<br><br>
+				<p>Actor name:</p>
+				<input type="text" name="actName">
+				<br><br>
+				<input type="submit" value="SUBMIT">
+			</form>
+
+			<!--delete actor from table using the actor's ID-->
+			<h1>DELETE ACTOR</h1>
+			<form method = "POST" action="deleteAct.php" onsubmit="return validate(this)">
+				<p>Actor ID:</p>
+				<input type="text" name="actID">
+				<br><br>
+				<input type="submit" value="DELETE">
+			</form>
+			<br><br>
+			<!--the footer of the html page-->
+			<footer>
+			<p><b>© 2019 by Godly Obeng. Databases & Interfaces Coursework 2</b></p>
+			</footer>
+	</body>
+		 
+</html>
