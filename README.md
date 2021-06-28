@@ -9,3 +9,6 @@ The functionality should include:
   * Searching for an actor in the database
   * Deleting an actor from the database
   * Deleting a movie from the database
+
+
+Checkout the website from here https://godlyobeng.github.io/DatabaseWebsite/
